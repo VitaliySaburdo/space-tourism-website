@@ -11,14 +11,16 @@ import { Home } from '../../pages';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<SharedLayout />}>
-        <Route index element={<Home />} />
-        <Route path="/destination" />
-        <Route path="/crew" />
-        <Route path="/technologies" />
-      </Route>
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="/destination" />
+          <Route path="/crew" />
+          <Route path="/technologies" />
+        </Route>
+      </Routes>
+    </>
   );
 }
 

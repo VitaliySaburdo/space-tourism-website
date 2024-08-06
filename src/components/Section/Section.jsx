@@ -1,3 +1,3 @@
-export const Section = (props, children) => {
-  return <section {...props}>{children}</section>;
+export const Section = ({ children }) => {
+  return <section>{children}</section>;
 };
