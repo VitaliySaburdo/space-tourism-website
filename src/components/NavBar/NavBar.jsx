@@ -12,10 +12,10 @@ export const NavBar = () => {
             <NavLink to="/destination">01 DESTINATION</NavLink>
           </li>
           <li>
-            <NavLink to="/">02 CREW</NavLink>
+            <NavLink to="/crew">02 CREW</NavLink>
           </li>
           <li>
-            <NavLink to="/">03 TECHNOLOGY</NavLink>
+            <NavLink to="/technology">03 TECHNOLOGY</NavLink>
           </li>
         </ul>
       </div>

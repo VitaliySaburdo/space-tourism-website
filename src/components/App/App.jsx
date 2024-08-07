@@ -2,7 +2,7 @@
 // import { Navigate, Route, Routes } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import { SharedLayout } from '../SharedLayout';
-import { Home, Destination, Crew, Technologies, NotFound } from '../../pages';
+import { Home, Destination, Crew, Technology, NotFound } from '../../pages';
 
 // const Home = lazy(() => import('../pages/Home'));
 // const Register = lazy(() => import('../pages/Register'));
@@ -17,7 +17,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="destination" element={<Destination />} />
           <Route path="crew" element={<Crew />} />
-          <Route path="technologies" element={<Technologies />} />
+          <Route path="technology" element={<Technology />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
