@@ -1,10 +1,10 @@
 import { Section } from '../components/Section';
 
-export function Home() {
+export function Destination() {
   return (
     <>
       <Section>
-        <h1>Home</h1>
+        <h1>Destination</h1>
       </Section>
     </>
   );
