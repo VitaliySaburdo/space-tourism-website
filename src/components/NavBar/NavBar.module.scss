@@ -1,0 +1,6 @@
+@import '../../assets/styles/index.scss';
+
+.container {
+  height: 96px;
+  @include centered-flex;
+}

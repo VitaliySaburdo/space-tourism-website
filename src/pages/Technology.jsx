@@ -1,5 +1,12 @@
 import React from 'react';
+import { Container } from '../components/Container';
 
 export const Technology = () => {
-  return <div>Technology</div>;
+  return (
+    <>
+      <Container>
+        <p style={{ color: 'var(--wite)' }}> Technology</p>
+      </Container>
+    </>
+  );
 };
