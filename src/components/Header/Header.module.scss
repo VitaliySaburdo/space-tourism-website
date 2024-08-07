@@ -4,12 +4,10 @@
   margin-bottom: 20px;
 }
 
-.img {
-}
-
 .decor {
   width: 559px;
   height: 1px;
-  background: var(--color-white);
+  background-color: #fff;
+  // background-color: $color-white;
   opacity: 0.25;
 }
