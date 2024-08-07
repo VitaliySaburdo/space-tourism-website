@@ -3,11 +3,18 @@
 .container {
   display: flex;
   gap: 48px;
-  padding-right: 159px;
-  padding-left: 64px;
+  padding-left: 159px;
+  padding-right: 64px;
   margin-left: auto;
   backdrop-filter: blur(80px);
   background: rgba(255, 255, 255, 0.05);
+}
+
+.number {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.17em;
+  margin-right: 12px;
 }
 
 .nav {

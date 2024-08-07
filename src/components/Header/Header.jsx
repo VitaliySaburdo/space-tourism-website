@@ -6,18 +6,20 @@ import style from './Header.module.scss';
 export const Header = () => {
   return (
     <>
-      <Container style={{ display: 'flex', alignItems: 'end' }}>
-        <div className={style.container}>
-          <img
-            className={style.img}
-            src={Logo}
-            alt="logo"
-            width={48}
-            height={48}
-          />
-          <div className={style.decor}></div>
+      <Container>
+        <div className={style.shell}>
+          <div className={style.container}>
+            <img
+              className={style.img}
+              src={Logo}
+              alt="logo"
+              width={48}
+              height={48}
+            />
+            <div className={style.decor}></div>
+          </div>
+          <NavBar />
         </div>
-        <NavBar />
       </Container>
     </>
   );

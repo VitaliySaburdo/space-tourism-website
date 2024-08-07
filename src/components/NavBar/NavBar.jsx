@@ -14,7 +14,7 @@ export const NavBar = () => {
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/"
           >
-            00 HOME
+            <span className={styles.number}>00</span>HOME
           </NavLink>
         </li>
         <li className="">
@@ -22,7 +22,7 @@ export const NavBar = () => {
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/destination"
           >
-            01 DESTINATION
+            <span className={styles.number}>01</span>DESTINATION
           </NavLink>
         </li>
         <li className="">
@@ -30,7 +30,7 @@ export const NavBar = () => {
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/crew"
           >
-            02 CREW
+            <span className={styles.number}>02</span>CREW
           </NavLink>
         </li>
         <li className="">
@@ -38,7 +38,7 @@ export const NavBar = () => {
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/technology"
           >
-            03 TECHNOLOGY
+            <span className={styles.number}>03</span>TECHNOLOGY
           </NavLink>
         </li>
       </ul>

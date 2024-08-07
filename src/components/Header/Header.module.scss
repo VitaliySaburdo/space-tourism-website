@@ -1,13 +1,24 @@
+@import '../../assets/styles/index.scss';
+
 .container {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  position: relative;
+  padding-left: 64px;
+}
+
+.shell {
+  display: flex;
+  align-items: end;
 }
 
 .decor {
+  position: absolute;
+  z-index: 100;
+  left: 176px;
   width: 559px;
   height: 1px;
-  background-color: #fff;
-  // background-color: $color-white;
+  background-color: $color-white;
   opacity: 0.25;
 }
