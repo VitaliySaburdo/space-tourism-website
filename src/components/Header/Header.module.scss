@@ -6,9 +6,12 @@
   margin-bottom: 20px;
   position: relative;
   padding-left: 64px;
+  margin-right: 592px;
 }
 
 .shell {
+  position: fixed;
+  padding-top: 20px;
   display: flex;
   align-items: end;
 }

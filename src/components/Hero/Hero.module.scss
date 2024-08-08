@@ -1,7 +1,7 @@
 @import '../../assets/styles/index.scss';
 
 .container {
-  margin-top: 417px;
+  padding-top: 417px;
   padding-left: 165px;
   padding-right: 165px;
   display: flex;
@@ -46,4 +46,9 @@
   font-size: 32px;
   text-transform: uppercase;
   color: $color-blue-900;
+
+  &:hover {
+    outline: 88px solid rgba(255, 255, 255, 0.1);
+    color: rgba($color-blue-900, 0.5);
+  }
 }
