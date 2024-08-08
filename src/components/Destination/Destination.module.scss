@@ -50,8 +50,49 @@
   color: $color-white;
   padding-bottom: 15px;
   cursor: pointer;
+  margin-bottom: 40px;
 }
 
 .active {
   border-bottom: 3px solid $color-white;
+}
+.name {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 96px;
+  color: $color-white;
+}
+.description {
+  font-family: $third-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+  color: $color-blue-300;
+  margin-bottom: 40px;
+}
+.decor {
+  width: 100%;
+  height: 1px;
+  background: $color-white;
+  opacity: 0.25;
+  margin-bottom: 40px;
+}
+.box {
+  display: flex;
+}
+.label {
+  width: 210px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.14em;
+  color: $color-blue-300;
+  margin-bottom: 12px;
+}
+.value {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: $color-white;
 }

@@ -5,6 +5,8 @@ import style from './Destination.module.scss';
 export const Destination = ({ data }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
 
+  console.log(typeof data[0].name);
+
   const HandleOnClick = (idx) => {
     setCurrentIdx(idx);
   };
@@ -42,17 +44,19 @@ export const Destination = ({ data }) => {
           </ul>
           <Outlet />
           <div>
-            <h2>{data[currentIdx].name}</h2>
-            <p>{data[currentIdx].description}</p>
-            <div></div>
-            <div>
+            <h2 className={style.name}>
+              {data[currentIdx].name.toUpperCase()}
+            </h2>
+            <p className={style.description}>{data[currentIdx].description}</p>
+            <div className={style.decor}></div>
+            <div className={style.box}>
               <div>
-                <p>distance</p>
-                <p>{data[currentIdx].distance}</p>
+                <p className={style.label}>AVG. DISTANCE</p>
+                <p className={style.value}>{data[currentIdx].distance}</p>
               </div>
               <div>
-                <p>travel</p>
-                <p>{data[currentIdx].travel}</p>
+                <p className={style.label}>Est. travel time</p>
+                <p className={style.value}>{data[currentIdx].travel}</p>
               </div>
             </div>
           </div>
