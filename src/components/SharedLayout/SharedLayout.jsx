@@ -9,13 +9,13 @@ export const SharedLayout = () => {
   const getBackgroundImage = () => {
     switch (location.pathname) {
       case '/':
-        return 'url("/public/assets/images/home/background-home-desktop.jpg")';
+        return 'url("/assets/images/home/background-home-desktop.jpg")';
       case '/destination':
-        return 'url("/public/assets/images/destination/background-destination-desktop.jpg")';
+        return 'url("/assets/images/destination/background-destination-desktop.jpg")';
       case '/crew':
-        return 'url("/public/assets/images/crew/background-crew-desktop.jpg")';
+        return 'url("/assets/images/crew/background-crew-desktop.jpg")';
       case '/technology':
-        return 'url("/public/assets/images/technology/background-technology-desktop.jpg")';
+        return 'url("/assets/images/technology/background-technology-desktop.jpg")';
       default:
         return 'none';
     }
