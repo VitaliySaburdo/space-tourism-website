@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '../components/Container';
 
-export const Technology = () => {
+export const TechnologyPage = () => {
   return (
     <>
       <Container>
@@ -9,4 +9,4 @@ export const Technology = () => {
       </Container>
     </>
   );
-};
+}

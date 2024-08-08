@@ -1,15 +1,15 @@
+import React from 'react';
 import { Container } from '../components/Container';
 import { Section } from '../components/Section';
-import { Hero } from '../components/Hero';
 
-export function Home() {
+export const CrewPage = () => {
   return (
     <>
       <Section>
         <Container>
-          <Hero />
+          <h2>Crew</h2>
         </Container>
       </Section>
     </>
   );
-}
+};

@@ -1,5 +1,5 @@
-export { Home } from './Home';
-export { Destination } from './Destination';
-export { Crew } from './Crew.jsx';
-export { Technology } from './Technology.jsx';
+export { HomePage } from './HomePage.jsx';
+export { DestinationPage } from './DestinationPage.jsx';
+export { CrewPage } from './CrewPage.jsx';
+export { TechnologyPage } from './TechnologyPage.jsx';
 export { NotFound } from './NotFound.jsx';
