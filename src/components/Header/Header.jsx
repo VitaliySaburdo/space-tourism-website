@@ -1,5 +1,5 @@
 import { Container } from '../Container';
-import Logo from '../../../public/assets/images/shared/logo.svg';
+import Logo from '/assets/images/shared/logo.svg';
 import { NavBar } from '../NavBar';
 import style from './Header.module.scss';
 
