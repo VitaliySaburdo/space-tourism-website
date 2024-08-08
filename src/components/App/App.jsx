@@ -7,7 +7,7 @@ import {
   DestinationPage,
   CrewPage,
   TechnologyPage,
-  NotFound,
+  NotFoundPage,
 } from '../../pages';
 import data from '../../db/data.json';
 
@@ -32,7 +32,7 @@ function App() {
             path="technology"
             element={<TechnologyPage data={technology} />}
           />
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </>
