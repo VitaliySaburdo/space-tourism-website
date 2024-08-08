@@ -1,7 +1,7 @@
 @import '../../assets/styles/index.scss';
 
 .container {
-  padding-top: 417px;
+  padding-top: calc(136px + 417px);
   padding-left: 165px;
   padding-right: 165px;
   display: flex;
