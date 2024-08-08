@@ -1,0 +1,57 @@
+@import '../../styles/index.scss';
+
+.container {
+  padding-top: calc($desk-sec-pt + 46px);
+  padding-bottom: 48px;
+  padding-left: 165px;
+  padding-right: 165px;
+}
+.title {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 0.14em;
+  color: $color-white;
+  margin-bottom: 151px;
+}
+.number {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.17em;
+  color: rgba($color-white, 0.25);
+  margin-right: 24px;
+}
+.img {
+  padding-left: 29.5px;
+  padding-right: 29.5px;
+}
+.shell {
+  display: flex;
+  gap: 79px;
+}
+.block {
+  width: 445px;
+}
+.list {
+  display: flex;
+  gap: 32px;
+}
+.btn {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  color: $color-white;
+  padding-bottom: 15px;
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 3px solid $color-white;
+}

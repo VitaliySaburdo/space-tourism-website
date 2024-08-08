@@ -16,13 +16,20 @@ export const Destination = ({ data }) => {
         PICK YOUR DESTINATION
       </h3>
       <div className={style.shell}>
-        <img src={data[currentIdx].images.webp} alt={data.name} />
+        <img
+          className={style.img}
+          src={data[currentIdx].images.webp}
+          alt={data.name}
+        />
         <div className={style.block}>
           <ul className={style.list}>
             {data.map(({ name }, idx) => {
               return (
                 <li key={idx}>
                   <button
+                    className={`${style.btn} ${
+                      currentIdx === idx ? style.active : ''
+                    }`}
                     onClick={() => {
                       HandleOnClick(idx);
                     }}

@@ -1,7 +1,7 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc(136px + 417px);
+  padding-top: calc($desk-sec-pt + 417px);
   padding-bottom: 128px;
   padding-left: 165px;
   padding-right: 165px;
