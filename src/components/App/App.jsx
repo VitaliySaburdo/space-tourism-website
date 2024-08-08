@@ -1,5 +1,3 @@
-// import './App.scss';
-// import { Navigate, Route, Routes } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import { SharedLayout } from '../SharedLayout';
 import {
@@ -10,11 +8,6 @@ import {
   NotFoundPage,
 } from '../../pages';
 import data from '../../db/data.json';
-
-// const Home = lazy(() => import('../pages/Home'));
-// const Register = lazy(() => import('../pages/Register'));
-// const Login = lazy(() => import('../pages/Login'));
-// const Contacts = lazy(() => import('../pages/Contacts'));
 
 function App() {
   const { destinations, crew, technology } = data;
