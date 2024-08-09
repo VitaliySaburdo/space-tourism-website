@@ -1,0 +1,77 @@
+@import '../../styles/index.scss';
+
+.container {
+  padding-top: calc($desk-sec-pt + 46px);
+  padding-bottom: 48px;
+  padding-left: 165px;
+  padding-right: 165px;
+}
+.title {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 0.14em;
+  color: $color-white;
+  margin-bottom: 24px;
+}
+.number {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.17em;
+  color: rgba($color-white, 0.25);
+  margin-right: 24px;
+}
+.shell {
+  display: flex;
+  gap: 32px;
+}
+.block {
+  width: 539px;
+  padding-top: 197px;
+  margin-bottom: 40px;
+}
+.role {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 32px;
+  text-transform: uppercase;
+  color: $color-white;
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+.name {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 56px;
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 24px;
+}
+.bio {
+  font-family: $third-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+  color: $color-blue-300;
+  margin-bottom: 237px;
+}
+.list {
+  display: flex;
+  gap: 40px;
+}
+
+.btn {
+  width: 15px;
+  height: 15px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba($color-white, 0.25);
+  cursor: pointer;
+  &.active {
+    background-color: $color-white;
+  }
+}
+.box {
+  @include centered-flex;
+}

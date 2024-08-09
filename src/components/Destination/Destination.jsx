@@ -5,14 +5,12 @@ import style from './Destination.module.scss';
 export const Destination = ({ data }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
 
-  console.log(typeof data[0].name);
-
   const HandleOnClick = (idx) => {
     setCurrentIdx(idx);
   };
 
   return (
-    <div className={style.container} style={{ paddingTop: '200px' }}>
+    <div className={style.container}>
       <h3 className={style.title}>
         <span className={style.number}>01</span>
         PICK YOUR DESTINATION
