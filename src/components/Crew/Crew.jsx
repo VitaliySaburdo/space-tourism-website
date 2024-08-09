@@ -39,11 +39,13 @@ export const Crew = ({ data }) => {
           </ul>
         </div>
         <div className={style.box}>
-          <img
-            className={style.img}
-            src={data[currentIdx].images.webp}
-            alt={data.name}
-          />
+          <div className={style.wrapper}>
+            <img
+              className={style.img}
+              src={data[currentIdx].images.webp}
+              alt={data.name}
+            />
+          </div>
         </div>
       </div>
     </div>

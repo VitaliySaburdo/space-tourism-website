@@ -37,6 +37,7 @@
 }
 
 .styledLink {
+  position: relative;
   @include centered-flex;
   width: 272px;
   height: 272px;
@@ -47,9 +48,23 @@
   font-size: 32px;
   text-transform: uppercase;
   color: $color-blue-900;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
-    outline: 88px solid rgba(255, 255, 255, 0.1);
-    color: rgba($color-blue-900, 0.5);
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover::after {
+    transform: scale(1.5);
+    opacity: 1;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }

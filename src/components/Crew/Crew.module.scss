@@ -84,7 +84,14 @@
   }
 }
 .box {
-  @include centered-flex;
+  position: relative;
   width: 539px;
   height: 734px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.wrapper {
+  width: 539px;
+  height: 676px;
 }
