@@ -1,10 +1,11 @@
 import { Container } from '../components/Container';
+import { Technology } from '../components/Technology/Technology';
 
-export const TechnologyPage = () => {
+export const TechnologyPage = ({ data }) => {
   return (
     <>
       <Container>
-        <p> Technology</p>
+        <Technology data={data} />
       </Container>
     </>
   );
