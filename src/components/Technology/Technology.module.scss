@@ -44,6 +44,9 @@
   font-size: 32px;
   color: $color-white;
   cursor: pointer;
+  &:hover {
+    border: 1px solid $color-white;
+  }
   &.active {
     background-color: $color-white;
     color: $color-blue-900;
