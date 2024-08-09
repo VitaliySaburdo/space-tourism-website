@@ -1,5 +1,5 @@
-import React from 'react';
 import { Container } from '../components/Container';
+import { Crew } from '../components/Crew';
 import { Section } from '../components/Section';
 
 export const CrewPage = () => {
@@ -7,7 +7,7 @@ export const CrewPage = () => {
     <>
       <Section>
         <Container>
-          <h2>Crew</h2>
+          <Crew />
         </Container>
       </Section>
     </>
