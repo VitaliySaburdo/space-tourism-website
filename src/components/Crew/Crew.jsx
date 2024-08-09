@@ -15,10 +15,12 @@ export const Crew = ({ data }) => {
         MEET YOUR CREW
       </h3>
       <div className={style.shell}>
-        <div className={style.block}>
-          <h3 className={style.role}>{data[currentIdx].role}</h3>
-          <h2 className={style.name}>{data[currentIdx].name}</h2>
-          <p className={style.bio}>{data[currentIdx].bio}</p>
+        <div className={style.wrapper}>
+          <div className={style.block}>
+            <h3 className={style.role}>{data[currentIdx].role}</h3>
+            <h2 className={style.name}>{data[currentIdx].name}</h2>
+            <p className={style.bio}>{data[currentIdx].bio}</p>
+          </div>
           <ul className={style.list}>
             {data.map((__, idx) => {
               return (
@@ -41,8 +43,6 @@ export const Crew = ({ data }) => {
             className={style.img}
             src={data[currentIdx].images.webp}
             alt={data.name}
-            width={539}
-            height={734}
           />
         </div>
       </div>

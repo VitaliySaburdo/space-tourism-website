@@ -38,12 +38,7 @@ export const Technology = ({ data }) => {
             <h2 className={style.name}>{data[currentIdx].name}</h2>
             <p className={style.description}>{data[currentIdx].description}</p>
           </div>
-          <img
-            src={data[currentIdx].images.portrait}
-            alt={data.name}
-            width={608}
-            height={600}
-          />
+          <img src={data[currentIdx].images.portrait} alt={data.name} />
         </div>
       </div>
     </div>

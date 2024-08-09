@@ -1,7 +1,7 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc($desk-sec-pt + 46px);
+  padding-top: calc($desk-sec-pt + 48px);
   padding-bottom: 48px;
   padding-left: 165px;
   padding-right: 165px;
@@ -26,9 +26,15 @@
   display: flex;
   gap: 32px;
 }
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
 .block {
+  display: flex;
+  flex-direction: column;
   width: 539px;
-  padding-top: 197px;
+  padding-top: 149px;
   margin-bottom: 40px;
 }
 .role {
@@ -49,16 +55,18 @@
   margin-bottom: 24px;
 }
 .bio {
+  display: block;
   font-family: $third-family;
   font-weight: 400;
   font-size: 18px;
   line-height: 180%;
   color: $color-blue-300;
-  margin-bottom: 237px;
 }
 .list {
   display: flex;
   gap: 40px;
+  margin-top: auto;
+  margin-bottom: 40px;
 }
 
 .btn {
@@ -77,4 +85,6 @@
 }
 .box {
   @include centered-flex;
+  width: 539px;
+  height: 734px;
 }
