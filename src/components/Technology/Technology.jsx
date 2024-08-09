@@ -32,7 +32,19 @@ export const Technology = ({ data }) => {
             );
           })}
         </ul>
-        <div className={style.block}></div>
+        <div className={style.box}>
+          <div className={style.block}>
+            <h3 className={style.terminology}>THE TERMINOLOGY…</h3>
+            <h2 className={style.name}>{data[currentIdx].name}</h2>
+            <p className={style.description}>{data[currentIdx].description}</p>
+          </div>
+          <img
+            src={data[currentIdx].images.portrait}
+            alt={data.name}
+            width={608}
+            height={600}
+          />
+        </div>
       </div>
     </div>
   );

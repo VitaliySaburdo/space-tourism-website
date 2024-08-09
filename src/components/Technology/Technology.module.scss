@@ -1,10 +1,9 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc($desk-sec-pt + 46px);
+  padding-top: calc($desk-sec-pt + 48px);
   padding-bottom: 48px;
   padding-left: 165px;
-  padding-right: 165px;
 }
 .title {
   font-family: $font-family;
@@ -12,7 +11,7 @@
   font-size: 28px;
   letter-spacing: 0.14em;
   color: $color-white;
-  margin-bottom: 24px;
+  margin-bottom: calc(24px + 239px);
 }
 .number {
   font-family: $font-family;
@@ -23,6 +22,61 @@
   margin-right: 24px;
 }
 .shell {
+  display: flex;
+  gap: 32px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-right: 64px;
+}
+
+.btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  @include centered-flex;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  color: $color-white;
+  cursor: pointer;
+  &.active {
+    background-color: $color-white;
+    color: $color-blue-900;
+  }
+}
+.block {
+  width: 491px;
+}
+.terminology {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 32px;
+  color: $color-white;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+.name {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 56px;
+  text-transform: uppercase;
+  color: $color-white;
+  margin-bottom: 24px;
+}
+.description {
+  font-family: $third-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 180%;
+  color: $color-blue-300;
+}
+
+.box {
   display: flex;
   gap: 32px;
 }
