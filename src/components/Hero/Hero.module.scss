@@ -19,8 +19,9 @@
 }
 
 .shell {
-  max-width: auto;
+  margin-bottom: 65px;
   @include mq(desk) {
+    margin-bottom: 0;
     max-width: 540px;
   }
 }
