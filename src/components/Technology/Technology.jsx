@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './Technology.module.scss';
+import { AnimatedText, StaticAnimate } from '../Animate';
 
 export const Technology = ({ data }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -34,11 +35,23 @@ export const Technology = ({ data }) => {
         </ul>
         <div className={style.box}>
           <div className={style.block}>
-            <h3 className={style.terminology}>THE TERMINOLOGY…</h3>
-            <h2 className={style.name}>{data[currentIdx].name}</h2>
-            <p className={style.description}>{data[currentIdx].description}</p>
+            <StaticAnimate>
+              <h3 className={style.terminology}>THE TERMINOLOGY…</h3>
+            </StaticAnimate>
+            <AnimatedText key={currentIdx}>
+              <AnimatedText delay={0.4}>
+                <h2 className={style.name}>{data[currentIdx].name}</h2>
+              </AnimatedText>
+              <AnimatedText delay={0.6}>
+                <p className={style.description}>
+                  {data[currentIdx].description}
+                </p>
+              </AnimatedText>
+            </AnimatedText>
           </div>
-          <img src={data[currentIdx].images.portrait} alt={data.name} />
+          <StaticAnimate key={currentIdx}>
+            <img src={data[currentIdx].images.portrait} alt={data.name} />
+          </StaticAnimate>
         </div>
       </div>
     </div>

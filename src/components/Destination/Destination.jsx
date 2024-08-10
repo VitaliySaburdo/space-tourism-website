@@ -49,20 +49,20 @@ export const Destination = ({ data }) => {
             })}
           </ul>
           <Outlet />
-          <StaticAnimate>
+          <StaticAnimate key={currentIdx}>
             <div>
-              <AnimatedText delay={0.4}>
+              <StaticAnimate>
                 <h2 className={style.name}>
                   {data[currentIdx].name.toUpperCase()}
                 </h2>
-              </AnimatedText>
+              </StaticAnimate>
               <AnimatedText delay={0.4}>
                 <p className={style.description}>
                   {data[currentIdx].description}
                 </p>
               </AnimatedText>
               <div className={style.decor}></div>
-              <AnimatedText delay={0.4}>
+              <AnimatedText delay={0.6}>
                 <div className={style.box}>
                   <div>
                     <p className={style.label}>AVG. DISTANCE</p>
