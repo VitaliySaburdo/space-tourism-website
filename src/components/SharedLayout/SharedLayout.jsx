@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { Suspense, useRef } from 'react';
+import { Suspense, useRef, useState, useEffect, useCallback } from 'react';
 import { Header } from '../Header';
 import { motion } from 'framer-motion';
 import style from './SharedLayout.module.scss';
@@ -7,23 +7,37 @@ import style from './SharedLayout.module.scss';
 export const SharedLayout = () => {
   const location = useLocation();
   const mainRef = useRef(null);
+  const [backgroundImage, setBackgroundImage] = useState('');
 
-  const getBackgroundImage = () => {
+  const getBackgroundImage = useCallback(() => {
+    const screen = window.matchMedia('(max-width: 767px)').matches
+      ? 'mobile'
+      : window.matchMedia('(max-width: 1439px)').matches
+      ? 'tablet'
+      : 'desktop';
+
     switch (location.pathname) {
       case '/':
-        return 'url("/assets/images/home/background-home-desktop.jpg")';
+        return `url("/assets/images/home/background-home-${screen}.jpg")`;
       case '/destination':
-        return 'url("/assets/images/destination/background-destination-desktop.jpg")';
+        return `url("/assets/images/destination/background-destination-${screen}.jpg")`;
       case '/crew':
-        return 'url("/assets/images/crew/background-crew-desktop.jpg")';
+        return `url("/assets/images/crew/background-crew-${screen}.jpg")`;
       case '/technology':
-        return 'url("/assets/images/technology/background-technology-desktop.jpg")';
+        return `url("/assets/images/technology/background-technology-${screen}.jpg")`;
       default:
         return 'none';
     }
-  };
+  }, [location.pathname]);
 
-  const backgroundImage = getBackgroundImage();
+  useEffect(() => {
+    const updateBackgroundImage = () => {
+      setBackgroundImage(getBackgroundImage());
+    };
+    updateBackgroundImage();
+    window.addEventListener('resize', updateBackgroundImage);
+    return () => window.removeEventListener('resize', updateBackgroundImage);
+  }, [getBackgroundImage]);
 
   return (
     <>
