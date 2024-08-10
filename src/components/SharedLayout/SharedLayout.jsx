@@ -33,10 +33,10 @@ export const SharedLayout = () => {
           ref={mainRef}
           className={style.main}
           style={{ backgroundImage: backgroundImage }}
-          initial={{ backgroundSize: '100%' }} // Initial size
-          animate={{ backgroundSize: '105%' }} // Animated size
-          transition={{ duration: 3, ease: [0.25, 0.46, 0.45, 0.94] }} // Transition settings
-          key={location.pathname} // Change key to trigger animation on route change
+          initial={{ backgroundSize: '100%' }}
+          animate={{ backgroundSize: '103%' }}
+          transition={{ duration: 3, ease: [0.25, 0.46, 0.45, 0.94] }}
+          key={location.pathname}
         >
           <Outlet />
         </motion.main>

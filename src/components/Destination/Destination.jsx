@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import style from './Destination.module.scss';
+import { motion } from 'framer-motion';
 
 export const Destination = ({ data }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -16,11 +17,17 @@ export const Destination = ({ data }) => {
         PICK YOUR DESTINATION
       </h3>
       <div className={style.shell}>
-        <img
-          className={style.img}
-          src={data[currentIdx].images.webp}
-          alt={data.name}
-        />
+        <div className={style.imgShell}>
+          <motion.img
+            key={currentIdx}
+            initial={{ opacity: 0.4, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 3 }}
+            className={style.img}
+            src={data[currentIdx].images.webp}
+            alt={data.name}
+          />
+        </div>
         <div className={style.block}>
           <ul className={style.list}>
             {data.map(({ name }, idx) => {
