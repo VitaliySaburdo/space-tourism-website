@@ -8,9 +8,13 @@
   padding-left: 64px;
   margin-right: 582px;
 }
-
-.shell {
+.header {
   position: fixed;
+  z-index: 1000;
+  right: 0;
+  left: 0;
+}
+.shell {
   padding-top: 20px;
   display: flex;
   align-items: end;

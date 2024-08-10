@@ -6,21 +6,23 @@ import style from './Header.module.scss';
 export const Header = () => {
   return (
     <>
-      <Container>
-        <div className={style.shell}>
-          <div className={style.container}>
-            <img
-              className={style.img}
-              src={Logo}
-              alt="logo"
-              width={48}
-              height={48}
-            />
-            <div className={style.decor}></div>
+      <header className={style.header}>
+        <Container>
+          <div className={style.shell}>
+            <div className={style.container}>
+              <img
+                className={style.img}
+                src={Logo}
+                alt="logo"
+                width={48}
+                height={48}
+              />
+              <div className={style.decor}></div>
+            </div>
+            <NavBar />
           </div>
-          <NavBar />
-        </div>
-      </Container>
+        </Container>
+      </header>
     </>
   );
 };
