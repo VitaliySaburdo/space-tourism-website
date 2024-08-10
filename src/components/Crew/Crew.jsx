@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import AnimatedText from '../Animate/AnimatedText';
+import { AnimatedText } from '../Animate';
 import style from './Crew.module.scss';
 
 export const Crew = ({ data }) => {
