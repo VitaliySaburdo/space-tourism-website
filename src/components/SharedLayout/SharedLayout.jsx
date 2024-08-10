@@ -1,10 +1,12 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { Suspense } from 'react';
+import { Suspense, useRef } from 'react';
 import { Header } from '../Header';
+import { motion } from 'framer-motion';
 import style from './SharedLayout.module.scss';
 
 export const SharedLayout = () => {
   const location = useLocation();
+  const mainRef = useRef(null);
 
   const getBackgroundImage = () => {
     switch (location.pathname) {
@@ -27,12 +29,17 @@ export const SharedLayout = () => {
     <>
       <Header />
       <Suspense fallback={null}>
-        <main
+        <motion.main
+          ref={mainRef}
           className={style.main}
           style={{ backgroundImage: backgroundImage }}
+          initial={{ backgroundSize: '100%' }} // Initial size
+          animate={{ backgroundSize: '105%' }} // Animated size
+          transition={{ duration: 3, ease: [0.25, 0.46, 0.45, 0.94] }} // Transition settings
+          key={location.pathname} // Change key to trigger animation on route change
         >
           <Outlet />
-        </main>
+        </motion.main>
       </Suspense>
     </>
   );
