@@ -1,32 +1,45 @@
 @import '../../styles/index.scss';
 
-.container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  position: relative;
-  padding-left: 64px;
-  margin-right: 582px;
-}
 .header {
   position: fixed;
   z-index: 1000;
   right: 0;
   left: 0;
 }
+
 .shell {
-  padding-top: 20px;
   display: flex;
-  align-items: end;
+  align-items: center;
   backdrop-filter: blur(10px);
+  margin-left: 40px;
+  @include mq(desk) {
+    margin-left: 0;
+    padding-top: 20px;
+    align-items: end;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  @include mq(desk) {
+    padding-left: 64px;
+    margin-bottom: 20px;
+    margin-right: 582px;
+  }
 }
 
 .decor {
-  position: absolute;
-  z-index: 100;
-  left: 176px;
-  width: 559px;
-  height: 1px;
-  background-color: $color-white;
-  opacity: 0.25;
+  display: none;
+  @include mq(desk) {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    left: 176px;
+    width: 559px;
+    height: 1px;
+    background-color: $color-white;
+    opacity: 0.25;
+  }
 }

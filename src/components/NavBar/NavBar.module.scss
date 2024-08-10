@@ -3,18 +3,25 @@
 .container {
   display: flex;
   gap: 48px;
-  padding-left: 159px;
-  padding-right: 64px;
+  padding-right: 40px;
   margin-left: auto;
+  padding-left: 117px;
   backdrop-filter: blur(80px);
   background: rgba(255, 255, 255, 0.05);
+  @include mq(desk) {
+    padding-left: 159px;
+    padding-right: 64px;
+  }
 }
 
 .number {
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.12em;
   margin-right: 12px;
+  @include mq(desk) {
+    letter-spacing: 0.17em;
+  }
 }
 
 .nav {
@@ -56,5 +63,12 @@
     height: 3px;
     border-bottom: 3px solid $color-white;
     transform: scale(1);
+  }
+}
+
+.home {
+  display: none;
+  @include mq(desk) {
+    display: block;
   }
 }

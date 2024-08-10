@@ -9,15 +9,16 @@ export const NavBar = () => {
   return (
     <>
       <ul className={styles.container}>
-        <li className="">
+        <li>
           <NavLink
+            style={{ display: 'flex' }}
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/"
           >
-            <span className={styles.number}>00</span>HOME
+            <span className={`${styles.number} ${styles.home}`}>00</span>HOME
           </NavLink>
         </li>
-        <li className="">
+        <li>
           <NavLink
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/destination"
@@ -25,7 +26,7 @@ export const NavBar = () => {
             <span className={styles.number}>01</span>DESTINATION
           </NavLink>
         </li>
-        <li className="">
+        <li>
           <NavLink
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/crew"
@@ -33,7 +34,7 @@ export const NavBar = () => {
             <span className={styles.number}>02</span>CREW
           </NavLink>
         </li>
-        <li className="">
+        <li>
           <NavLink
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/technology"
