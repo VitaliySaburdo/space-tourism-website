@@ -21,7 +21,7 @@ export const Destination = ({ data }) => {
           <motion.img
             key={currentIdx}
             initial={{ opacity: 0.4, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1, rotate: 10 }}
             transition={{ duration: 3 }}
             className={style.img}
             src={data[currentIdx].images.webp}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './Crew.module.scss';
+import AnimatedText from '../AnimatedText/AnimatedText';
 
 export const Crew = ({ data }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -17,9 +18,17 @@ export const Crew = ({ data }) => {
       <div className={style.shell}>
         <div className={style.wrapper}>
           <div className={style.block}>
-            <h3 className={style.role}>{data[currentIdx].role}</h3>
-            <h2 className={style.name}>{data[currentIdx].name}</h2>
-            <p className={style.bio}>{data[currentIdx].bio}</p>
+            <AnimatedText key={currentIdx}>
+              <AnimatedText delay={0.4}>
+                <h3 className={style.role}>{data[currentIdx].role}</h3>
+              </AnimatedText>
+              <AnimatedText delay={0.6}>
+                <h2 className={style.name}>{data[currentIdx].name}</h2>
+              </AnimatedText>
+              <AnimatedText delay={0.8}>
+                <p className={style.bio}>{data[currentIdx].bio}</p>
+              </AnimatedText>
+            </AnimatedText>
           </div>
           <ul className={style.list}>
             {data.map((__, idx) => {
