@@ -21,7 +21,6 @@ export const SharedLayout = () => {
         return 'none';
     }
   };
-
   const backgroundImage = getBackgroundImage();
 
   return (
@@ -33,12 +32,9 @@ export const SharedLayout = () => {
             key={location.pathname}
             className={style.main}
             style={{ backgroundImage: backgroundImage }}
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0 },
-              visible: { opacity: 1, transition: { duration: 1 } },
-            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+            exit={{ opacity: 0 }}
           >
             <Outlet />
           </motion.main>
