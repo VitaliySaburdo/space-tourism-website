@@ -64,11 +64,11 @@ export const Destination = ({ data }) => {
               <div className={style.decor}></div>
               <AnimatedText delay={0.6}>
                 <div className={style.box}>
-                  <div>
+                  <div className={style.wrapper}>
                     <p className={style.label}>AVG. DISTANCE</p>
                     <p className={style.value}>{data[currentIdx].distance}</p>
                   </div>
-                  <div>
+                  <div className={style.wrapper}>
                     <p className={style.label}>Est. travel time</p>
                     <p className={style.value}>{data[currentIdx].travel}</p>
                   </div>
