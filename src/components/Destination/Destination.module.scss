@@ -1,10 +1,16 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc($desk-sec-pt + 46px);
-  padding-bottom: 48px;
-  padding-left: 165px;
-  padding-right: 165px;
+  padding-top: calc($desk-sec-pt + 40px);
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  @include mq(desk) {
+    padding-top: calc($desk-sec-pt + 46px);
+    padding-bottom: 48px;
+    padding-left: 165px;
+    padding-right: 165px;
+  }
 }
 
 .title {
@@ -33,7 +39,11 @@
 }
 .shell {
   display: flex;
-  gap: 79px;
+  flex-direction: column;
+  @include mq(desk) {
+    display: flex;
+    gap: 79px;
+  }
 }
 .block {
   width: 445px;
