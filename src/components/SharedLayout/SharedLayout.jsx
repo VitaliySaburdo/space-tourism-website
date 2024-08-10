@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Header } from '../Header';
 import style from './SharedLayout.module.scss';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export const SharedLayout = () => {
   const location = useLocation();
@@ -27,12 +28,21 @@ export const SharedLayout = () => {
     <>
       <Header />
       <Suspense fallback={null}>
-        <main
-          className={style.main}
-          style={{ backgroundImage: backgroundImage }}
-        >
-          <Outlet />
-        </main>
+        <AnimatePresence mode="wait">
+          <motion.main
+            key={location.pathname}
+            className={style.main}
+            style={{ backgroundImage: backgroundImage }}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: { opacity: 1, transition: { duration: 1 } },
+            }}
+          >
+            <Outlet />
+          </motion.main>
+        </AnimatePresence>
       </Suspense>
     </>
   );
