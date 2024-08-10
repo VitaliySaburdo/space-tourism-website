@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const AnimatedText = ({ children, delay = 0, duration = 1 }) => {
+export const AnimatedText = ({ children, delay = 0, duration = 1 }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -11,5 +11,3 @@ const AnimatedText = ({ children, delay = 0, duration = 1 }) => {
     </motion.div>
   );
 };
-
-export default AnimatedText;

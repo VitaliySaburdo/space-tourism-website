@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import AnimatedText from '../AnimatedText/AnimatedText';
+import { AnimatedText, StaticAnimate } from '../Animate';
 import style from './Hero.module.scss';
 
 export const Hero = () => {
@@ -22,9 +22,11 @@ export const Hero = () => {
             </p>
           </AnimatedText>
         </div>
-        <NavLink className={style.styledLink} to="/destination">
-          EXPLORE
-        </NavLink>
+        <StaticAnimate>
+          <NavLink className={style.styledLink} to="/destination">
+            EXPLORE
+          </NavLink>
+        </StaticAnimate>
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import AnimatedText from '../Animate/AnimatedText';
 import style from './Crew.module.scss';
-import AnimatedText from '../AnimatedText/AnimatedText';
 
 export const Crew = ({ data }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -49,11 +50,18 @@ export const Crew = ({ data }) => {
         </div>
         <div className={style.box}>
           <div className={style.wrapper}>
-            <img
-              className={style.img}
-              src={data[currentIdx].images.webp}
-              alt={data.name}
-            />
+            <motion.div
+              key={currentIdx}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
+              <img
+                className={style.img}
+                src={data[currentIdx].images.webp}
+                alt={data.name}
+              />
+            </motion.div>
           </div>
         </div>
       </div>

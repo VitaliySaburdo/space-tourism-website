@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import style from './Destination.module.scss';
 import { motion } from 'framer-motion';
+import { AnimatedText, StaticAnimate } from '../Animate';
 
 export const Destination = ({ data }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -48,23 +49,33 @@ export const Destination = ({ data }) => {
             })}
           </ul>
           <Outlet />
-          <div>
-            <h2 className={style.name}>
-              {data[currentIdx].name.toUpperCase()}
-            </h2>
-            <p className={style.description}>{data[currentIdx].description}</p>
-            <div className={style.decor}></div>
-            <div className={style.box}>
-              <div>
-                <p className={style.label}>AVG. DISTANCE</p>
-                <p className={style.value}>{data[currentIdx].distance}</p>
-              </div>
-              <div>
-                <p className={style.label}>Est. travel time</p>
-                <p className={style.value}>{data[currentIdx].travel}</p>
-              </div>
+          <StaticAnimate>
+            <div>
+              <AnimatedText delay={0.4}>
+                <h2 className={style.name}>
+                  {data[currentIdx].name.toUpperCase()}
+                </h2>
+              </AnimatedText>
+              <AnimatedText delay={0.4}>
+                <p className={style.description}>
+                  {data[currentIdx].description}
+                </p>
+              </AnimatedText>
+              <div className={style.decor}></div>
+              <AnimatedText delay={0.4}>
+                <div className={style.box}>
+                  <div>
+                    <p className={style.label}>AVG. DISTANCE</p>
+                    <p className={style.value}>{data[currentIdx].distance}</p>
+                  </div>
+                  <div>
+                    <p className={style.label}>Est. travel time</p>
+                    <p className={style.value}>{data[currentIdx].travel}</p>
+                  </div>
+                </div>
+              </AnimatedText>
             </div>
-          </div>
+          </StaticAnimate>
         </div>
       </div>
     </div>
