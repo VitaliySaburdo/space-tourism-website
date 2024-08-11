@@ -26,12 +26,15 @@
   }
 }
 .wrapper {
-  margin-top: 40px;
+  width: 539px;
+  height: auto;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   @include mq(desk) {
     margin-top: 197px;
+    margin-top: 40px;
   }
 }
 .number {
@@ -131,12 +134,14 @@
 .box {
   position: relative;
   width: 539px;
-  height: 734px;
+  height: auto;
   display: flex;
   align-items: center;
   overflow: hidden;
+  @include mq(desk) {
+    height: 734px;
+  }
 }
-.wrapper {
-  width: 539px;
-  height: auto;
+.img {
+  margin: 0 auto;
 }
