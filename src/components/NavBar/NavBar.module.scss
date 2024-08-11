@@ -1,13 +1,16 @@
 @import '../../styles/index.scss';
 
 .container {
-  display: flex;
-  gap: 48px;
-  padding-right: 40px;
-  margin-left: auto;
-  padding-left: 117px;
-  backdrop-filter: blur(80px);
-  background: rgba(255, 255, 255, 0.05);
+  display: none;
+  @include mq(tab) {
+    display: flex;
+    gap: 48px;
+    padding-right: 40px;
+    margin-left: auto;
+    padding-left: 117px;
+    backdrop-filter: blur(80px);
+    background: rgba(255, 255, 255, 0.05);
+  }
   @include mq(desk) {
     padding-left: 159px;
     padding-right: 64px;
