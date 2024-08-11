@@ -1,7 +1,9 @@
 @import '../../styles/index.scss';
 
 .container {
+  margin-top: 90px;
   @include mq(tab) {
+    margin-top: 0;
     display: flex;
     gap: 48px;
     padding-right: 40px;
@@ -27,10 +29,14 @@
 }
 
 .nav {
+  @include mq(tab) {
+    padding-top: 38.5px;
+    padding-bottom: 38.5px;
+  }
   position: relative;
   display: block;
-  padding-top: 38.5px;
-  padding-bottom: 38.5px;
+  padding-top: 0;
+  padding-bottom: 0;
   font-size: 16px;
   letter-spacing: 0.12em;
   color: $color-white;
