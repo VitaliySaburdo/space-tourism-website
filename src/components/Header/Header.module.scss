@@ -8,18 +8,32 @@
 }
 
 .shell {
-  display: flex;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  margin-left: 40px;
+  margin-left: 24px;
+  @include mq(tab) {
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    margin-left: 40px;
+  }
   @include mq(desk) {
     margin-left: 0;
     padding-top: 20px;
     align-items: end;
   }
 }
+.menu {
+  margin-left: auto;
+  margin-right: 24px;
+  @include mq(tab) {
+    display: none;
+  }
+}
 
 .container {
+  height: 88px;
+  @include mq(tab) {
+    height: auto;
+  }
   display: flex;
   align-items: center;
   position: relative;
@@ -42,4 +56,20 @@
     background-color: $color-white;
     opacity: 0.25;
   }
+}
+.btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  @include centered-flex;
+  height: 40px;
+  width: 40px;
+  margin-right: 24px;
+}
+.menuOpen {
+  position: absolute;
+}
+.menuClose {
+  position: absolute;
 }

@@ -1,14 +1,20 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc($desk-sec-pt + 128px);
-  padding-bottom: 128px;
-  padding-left: 40px;
-  padding-right: 40px;
-  display: block;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding-top: calc($mob-sec-pt + 24px);
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  @include mq(tab) {
+    padding-top: calc($desk-sec-pt + 128px);
+    padding-bottom: 128px;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   @include mq(desk) {
     padding-top: calc($desk-sec-pt + 417px);
     flex-direction: row;
@@ -19,7 +25,10 @@
 }
 
 .shell {
-  margin-bottom: 65px;
+  margin-bottom: 118px;
+  @include mq(tab) {
+    margin-bottom: 65px;
+  }
   @include mq(desk) {
     margin-bottom: 0;
     max-width: 540px;
@@ -27,11 +36,17 @@
 }
 
 .txt {
-  font-size: 28px;
-  letter-spacing: 0.14em;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  text-align: center;
   color: $color-blue-300;
   margin-bottom: 24px;
-  text-align: center;
+  @include mq(tab) {
+    font-size: 28px;
+    letter-spacing: 0.14em;
+  }
   @include mq(desk) {
     text-align: start;
   }
@@ -40,10 +55,13 @@
 .title {
   font-family: $second-family;
   font-weight: 400;
-  font-size: 144px;
+  font-size: 80px;
+  text-align: center;
   color: $color-white;
   margin-bottom: 24px;
-  text-align: center;
+  @include mq(tab) {
+    font-size: 144px;
+  }
   @include mq(desk) {
     text-align: start;
   }
@@ -52,10 +70,13 @@
 .article {
   font-family: $third-family;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 180%;
-  color: $color-blue-300;
   text-align: center;
+  color: $color-blue-300;
+  @include mq(tab) {
+    font-size: 18px;
+  }
   @include mq(desk) {
     text-align: start;
   }
@@ -63,17 +84,24 @@
 
 .styledLink {
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
   @include centered-flex;
-  width: 272px;
-  height: 272px;
+  width: 144px;
+  height: 144px;
   background: $color-white;
   font-family: $second-family;
-  border-radius: 50%;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 18px;
   text-transform: uppercase;
   color: $color-blue-900;
+  border-radius: 50%;
   transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  @include mq(tab) {
+    width: 272px;
+    height: 272px;
+    font-size: 32px;
+  }
 
   &::after {
     content: '';
