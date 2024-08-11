@@ -15,42 +15,50 @@ export const Technology = ({ data }) => {
         SPACE LAUNCH 101
       </h3>
       <div className={style.shell}>
-        <ul className={style.list}>
-          {data.map((__, idx) => {
-            return (
-              <li key={idx}>
-                <button
-                  className={`${style.btn} ${
-                    currentIdx === idx ? style.active : ''
-                  }`}
-                  onClick={() => {
-                    HandleOnClick(idx);
-                  }}
-                >
-                  {idx + 1}
-                </button>
-              </li>
-            );
-          })}
-        </ul>
         <div className={style.box}>
-          <div className={style.block}>
-            <StaticAnimate>
-              <h3 className={style.terminology}>THE TERMINOLOGY…</h3>
-            </StaticAnimate>
-            <AnimatedText key={currentIdx}>
-              <AnimatedText delay={0.4}>
-                <h2 className={style.name}>{data[currentIdx].name}</h2>
+          <div className={style.infoBlock}>
+            <ul className={style.list}>
+              {data.map((__, idx) => {
+                return (
+                  <li key={idx}>
+                    <button
+                      className={`${style.btn} ${
+                        currentIdx === idx ? style.active : ''
+                      }`}
+                      onClick={() => {
+                        HandleOnClick(idx);
+                      }}
+                    >
+                      {idx + 1}
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className={style.block}>
+              <StaticAnimate>
+                <h3 className={style.terminology}>THE TERMINOLOGY…</h3>
+              </StaticAnimate>
+              <AnimatedText key={currentIdx}>
+                <AnimatedText delay={0.4}>
+                  <h2 className={style.name}>{data[currentIdx].name}</h2>
+                </AnimatedText>
+                <AnimatedText delay={0.6}>
+                  <p className={style.description}>
+                    {data[currentIdx].description}
+                  </p>
+                </AnimatedText>
               </AnimatedText>
-              <AnimatedText delay={0.6}>
-                <p className={style.description}>
-                  {data[currentIdx].description}
-                </p>
-              </AnimatedText>
-            </AnimatedText>
+            </div>
           </div>
           <StaticAnimate key={currentIdx}>
-            <img src={data[currentIdx].images.portrait} alt={data.name} />
+            <div className={style.imgContainer}>
+              <img
+                className={style.img}
+                src={data[currentIdx].images.portrait}
+                alt={data.name}
+              />
+            </div>
           </StaticAnimate>
         </div>
       </div>

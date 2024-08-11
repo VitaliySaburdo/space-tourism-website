@@ -1,35 +1,76 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc($desk-sec-pt + 48px);
-  padding-bottom: 48px;
-  padding-left: 165px;
+  padding-top: calc($tab-sec-pt + 40px);
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  @include mq(desk) {
+    padding-top: calc($desk-sec-pt + 46px);
+    padding-bottom: 48px;
+    padding-left: 165px;
+  }
 }
 .title {
-  font-family: $font-family;
+  font-family: var(--font-family);
   font-weight: 400;
-  font-size: 28px;
-  letter-spacing: 0.14em;
+  font-size: 20px;
+  letter-spacing: 0.15em;
   color: $color-white;
-  margin-bottom: calc(24px + 239px);
+  margin-bottom: 24px;
+  @include mq(desk) {
+    font-size: 28px;
+    letter-spacing: 0.14em;
+    margin-bottom: 24px;
+  }
 }
 .number {
   font-family: $font-family;
   font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 0.17em;
+  font-size: 20px;
+  letter-spacing: 0.15em;
   color: rgba($color-white, 0.25);
   margin-right: 24px;
+  @include mq(desk) {
+    font-size: 28px;
+    letter-spacing: 0.17em;
+  }
 }
-.shell {
+.box {
   display: flex;
-  gap: 32px;
+  flex-direction: column-reverse;
+  align-items: center;
+  @include mq(desk) {
+    flex-direction: row;
+    height: 734px;
+  }
 }
-.list {
+
+.shell {
+  display: block;
+  @include mq(desk) {
+    display: flex;
+    gap: 32px;
+  }
+}
+
+.infoBlock {
   display: flex;
   flex-direction: column;
+  @include mq(desk) {
+    flex-direction: row;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   gap: 32px;
-  margin-right: 64px;
+  @include mq(desk) {
+    flex-direction: column;
+    margin-right: 64px;
+  }
 }
 
 .btn {
@@ -59,6 +100,10 @@
 
 .block {
   width: 491px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 32px;
 }
 .terminology {
   font-family: $second-family;
@@ -84,7 +129,17 @@
   color: $color-blue-300;
 }
 
-.box {
-  display: flex;
-  gap: 32px;
+.imgContainer {
+  width: 100%;
+  @include centered-flex;
+  height: 100%;
+  @include mq(desk) {
+    width: 608px;
+  }
+}
+.img {
+  width: 100vw;
+  @include mq(desk) {
+    width: 100%;
+  }
 }
