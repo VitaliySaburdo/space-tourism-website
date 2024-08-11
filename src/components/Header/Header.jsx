@@ -29,6 +29,9 @@ export const Header = () => {
               <div className={style.decor}></div>
             </div>
             <NavBar />
+            <div className={style.mobileMenu}>
+              <NavBar />
+            </div>
           </div>
         </Container>
       </header>

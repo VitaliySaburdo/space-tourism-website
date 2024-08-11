@@ -73,3 +73,8 @@
 .menuClose {
   position: absolute;
 }
+.mobileMenu {
+  @include mq(tab) {
+    display: none;
+  }
+}
