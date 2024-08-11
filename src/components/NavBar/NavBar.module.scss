@@ -1,7 +1,6 @@
 @import '../../styles/index.scss';
 
 .container {
-  display: none;
   @include mq(tab) {
     display: flex;
     gap: 48px;

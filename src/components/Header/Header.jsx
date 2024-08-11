@@ -28,7 +28,9 @@ export const Header = () => {
               </button>
               <div className={style.decor}></div>
             </div>
-            <NavBar />
+            <div className={style.deskTabMenu}>
+              <NavBar />
+            </div>
             <div className={style.mobileMenu}>
               <NavBar />
             </div>
