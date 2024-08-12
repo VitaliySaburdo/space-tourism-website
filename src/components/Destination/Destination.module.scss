@@ -1,10 +1,16 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc($tab-sec-pt + 40px);
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-top: calc($mob-sec-pt + 24px);
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  @include mq(tab) {
+    padding-top: calc($tab-sec-pt + 40px);
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   @include mq(desk) {
     padding-top: calc($desk-sec-pt + 46px);
     padding-bottom: 48px;
@@ -14,12 +20,16 @@
 }
 
 .title {
-  font-family: var(--font-family);
+  font-family: $font-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.15em;
+  margin-bottom: 24px;
   color: $color-white;
-  margin-bottom: 66px;
+  @include mq(tab) {
+    font-size: 20px;
+    margin-bottom: 66px;
+  }
   @include mq(desk) {
     font-size: 28px;
     letter-spacing: 0.14em;
@@ -29,10 +39,15 @@
 .number {
   font-family: $font-family;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.15em;
   color: rgba($color-white, 0.25);
   margin-right: 24px;
+  @include mq(tab) {
+    font-size: 20px;
+    margin-right: 24px;
+  }
+
   @include mq(desk) {
     font-size: 28px;
     letter-spacing: 0.17em;
@@ -40,8 +55,12 @@
 }
 
 .img {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
+  @include mq(tab) {
+    width: 300px;
+    height: 300px;
+  }
   @include mq(desk) {
     width: 480px;
     height: 480px;
@@ -54,14 +73,25 @@
   flex-direction: column;
   align-items: center;
   gap: 74px;
+  padding-top: 26.5px;
+  padding-bottom: 26.5px;
+  @include mq(tab) {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
   @include mq(desk) {
+    padding-top: 0;
+    padding-bottom: 0;
     display: flex;
     flex-direction: row;
     gap: 79px;
   }
 }
 .block {
-  width: 445px;
+  width: 100%;
+  @include mq(tab) {
+    width: 445px;
+  }
 }
 .list {
   display: flex;
@@ -77,13 +107,16 @@
   border: none;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.12em;
   color: $color-white;
   padding-bottom: 15px;
   cursor: pointer;
   margin-bottom: 24px;
   overflow: hidden;
+  @include mq(tab) {
+    font-size: 16px;
+  }
   @include mq(desk) {
     margin-bottom: 40px;
   }
@@ -119,9 +152,12 @@
   text-align: center;
   font-family: $second-family;
   font-weight: 400;
-  font-size: 80px;
+  font-size: 56px;
   color: $color-white;
   margin-bottom: 16px;
+  @include mq(tab) {
+    font-size: 80px;
+  }
   @include mq(desk) {
     text-align: start;
     font-size: 96px;
@@ -130,11 +166,14 @@
 .description {
   font-family: $third-family;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 180%;
   text-align: center;
   color: $color-blue-300;
   margin-bottom: 24px;
+  @include mq(tab) {
+    font-size: 16px;
+  }
   @include mq(desk) {
     font-size: 18px;
     text-align: start;
@@ -153,6 +192,12 @@
 }
 .box {
   display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include mq(tab) {
+    flex-direction: row;
+    gap: 0;
+  }
 }
 
 .wrapper {
