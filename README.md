@@ -1,8 +1,5 @@
 # Space tourism website solution
 
-This is a solution to the
-[Space tourism website](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3)
-
 ## Table of contents
 
 - [Overview](#overview)
