@@ -5,6 +5,7 @@ import MenuClose from '/assets/images/shared/icon-close.svg';
 import { NavBar } from '../NavBar';
 import style from './Header.module.scss';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,9 @@ export const Header = () => {
         <Container>
           <div className={style.shell}>
             <div className={style.container}>
-              <img className={style.img} src={Logo} alt="logo" />
+              <Link to="/">
+                <img className={style.img} src={Logo} alt="logo" />
+              </Link>
               <button onClick={openMobileMenu} className={style.btn}>
                 <img className={style.menuOpen} src={MenuOpen} alt="menu" />
               </button>
