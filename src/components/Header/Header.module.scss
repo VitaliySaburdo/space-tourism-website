@@ -5,14 +5,18 @@
   z-index: 1000;
   right: 0;
   left: 0;
+  background-color: rgb(11, 13, 23, 0.7);
+  @include mq(tab) {
+    background-color: transparent;
+  }
 }
 
 .shell {
   margin-left: 24px;
   @include mq(tab) {
     display: flex;
-    align-items: center;
     backdrop-filter: blur(10px);
+    align-items: center;
     margin-left: 40px;
   }
   @include mq(desk) {
