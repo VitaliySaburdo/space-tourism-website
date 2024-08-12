@@ -16,7 +16,7 @@
     align-items: center;
   }
   @include mq(desk) {
-    padding-top: calc($desk-sec-pt + 417px);
+    padding-top: calc($desk-sec-pt + 317px);
     flex-direction: row;
     justify-content: space-between;
     padding-left: 165px;
