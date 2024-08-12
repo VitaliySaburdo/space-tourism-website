@@ -1,16 +1,17 @@
 import { NavLink } from 'react-router-dom';
 import styles from './NavBar.module.scss';
 
-export const NavBar = () => {
+export const NavBar = ({ onCloseBtn }) => {
   const getNavLinkClass = (isActive) => {
     return isActive ? `${styles.nav} ${styles.active}` : styles.nav;
   };
 
   return (
-    <>
+    <nav>
       <ul className={styles.container}>
         <li>
           <NavLink
+            onClick={onCloseBtn}
             style={{ display: 'flex' }}
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/"
@@ -20,6 +21,7 @@ export const NavBar = () => {
         </li>
         <li>
           <NavLink
+            onClick={onCloseBtn}
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/destination"
           >
@@ -28,6 +30,7 @@ export const NavBar = () => {
         </li>
         <li>
           <NavLink
+            onClick={onCloseBtn}
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/crew"
           >
@@ -36,6 +39,7 @@ export const NavBar = () => {
         </li>
         <li>
           <NavLink
+            onClick={onCloseBtn}
             className={({ isActive }) => getNavLinkClass(isActive)}
             to="/technology"
           >
@@ -43,6 +47,6 @@ export const NavBar = () => {
           </NavLink>
         </li>
       </ul>
-    </>
+    </nav>
   );
 };

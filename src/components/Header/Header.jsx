@@ -39,7 +39,7 @@ export const Header = () => {
               <button onClick={closeMobileMenu} className={style.btn}>
                 <img className={style.menuClose} src={MenuClose} alt="menu" />
               </button>
-              <NavBar />
+              <NavBar onCloseBtn={closeMobileMenu} />
             </div>
           </div>
         </Container>
