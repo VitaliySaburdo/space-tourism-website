@@ -1,43 +1,57 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc($tab-sec-pt + 40px);
-  padding-bottom: 40px;
+  padding-top: calc($mob-sec-pt + 24px);
+  padding-bottom: 24px;
+  @include mq(tab) {
+    padding-top: calc($tab-sec-pt + 40px);
+    padding-bottom: 40px;
+  }
   @include mq(desk) {
-    padding-left: 40px;
-    padding-right: 40px;
     padding-top: calc($desk-sec-pt + 46px);
     padding-bottom: 48px;
     padding-left: 165px;
+    padding-right: 165px;
   }
 }
+
 .title {
-  padding-left: 40px;
-  font-family: var(--font-family);
+  text-align: center;
+  font-family: $font-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.15em;
-  color: $color-white;
   margin-bottom: 88px;
+  color: $color-white;
+  @include mq(tab) {
+    text-align: start;
+    font-size: 20px;
+    margin-bottom: 66px;
+  }
   @include mq(desk) {
-    padding-left: 0;
     font-size: 28px;
     letter-spacing: 0.14em;
-    margin-bottom: 24px;
+    margin-bottom: 151px;
   }
 }
+
 .number {
   font-family: $font-family;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 0.15em;
   color: rgba($color-white, 0.25);
   margin-right: 24px;
+  @include mq(tab) {
+    font-size: 20px;
+    margin-right: 24px;
+  }
   @include mq(desk) {
     font-size: 28px;
     letter-spacing: 0.17em;
   }
 }
+
 .box {
   display: flex;
   flex-direction: column-reverse;
@@ -94,6 +108,11 @@
     background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
+  @include mq(tab) {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
   @include mq(desk) {
     width: 80px;
     height: 80px;
@@ -110,17 +129,39 @@
 }
 
 .block {
-  width: 512px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-right: 0;
+  @include mq(tab) {
+    width: 512px;
+  }
   @include mq(desk) {
     margin-right: 32px;
     width: 491px;
   }
 }
+
 .terminology {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $color-white;
+  margin-bottom: 16px;
+  opacity: 0.5;
+  @include mq(tab) {
+    font-size: 24px;
+  }
+  @include mq(desk) {
+    text-align: start;
+    font-size: 32px;
+  }
+}
+
+.name {
   font-family: $second-family;
   font-weight: 400;
   font-size: 24px;
@@ -128,33 +169,30 @@
   text-align: center;
   color: $color-white;
   margin-bottom: 16px;
-  opacity: 0.5;
-  @include mq(desk) {
-    text-align: start;
-    font-size: 32px;
+  @include mq(tab) {
+    font-size: 40px;
   }
-}
-.name {
-  font-family: $second-family;
-  font-weight: 400;
-  font-size: 40px;
-  text-transform: uppercase;
-  text-align: center;
-  color: $color-white;
-  margin-bottom: 16px;
   @include mq(desk) {
     text-align: start;
     font-size: 56px;
     margin-bottom: 24px;
   }
 }
+
 .description {
   font-family: $third-family;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 180%;
   text-align: center;
   color: $color-blue-300;
+  padding-left: 24px;
+  padding-right: 24px;
+  @include mq(tab) {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 16px;
+  }
   @include mq(desk) {
     text-align: start;
     font-size: 18px;
@@ -171,10 +209,16 @@
     margin-bottom: 0;
   }
 }
+
 .img {
   width: 110vw;
-  height: 357px;
+  height: 258px;
+  object-position: bottom;
   object-fit: cover;
+  @include mq(tab) {
+    height: 357px;
+    object-position: center;
+  }
   @include mq(desk) {
     width: 100%;
     height: auto;

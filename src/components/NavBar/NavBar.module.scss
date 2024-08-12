@@ -29,10 +29,6 @@
 }
 
 .nav {
-  @include mq(tab) {
-    padding-top: 38.5px;
-    padding-bottom: 38.5px;
-  }
   position: relative;
   display: block;
   padding-top: 0;
@@ -40,6 +36,10 @@
   font-size: 16px;
   letter-spacing: 0.12em;
   color: $color-white;
+  @include mq(tab) {
+    padding-top: 38.5px;
+    padding-bottom: 38.5px;
+  }
 
   &::after {
     content: '';
@@ -75,7 +75,10 @@
 }
 
 .home {
-  display: none;
+  display: block;
+  @include mq(tab) {
+    display: none;
+  }
   @include mq(desk) {
     display: block;
   }
