@@ -1,5 +1,7 @@
 # Space tourism website solution
 
+![](./public/assets/images/preview.jpg)
+
 ## Table of contents
 
 - [Overview](#overview)
