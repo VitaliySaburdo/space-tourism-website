@@ -60,7 +60,6 @@ In the next projects I will improve my JS; I also need to consolidate my knowled
 
 ## Author
 
-- Telegram - [Vitaliy Saburdo](https://t.me/Vitaliy_Saburdo)
-- Linkedin -
-  [Vitaliy Saburdo](https://www.linkedin.com/in/vitaliy-saburdo-73363a264/?originalSubdomain=ua)
-- Gmail - [Vitaliy Saburdo](vsaburdo@gmail.com)
+- Telegram - [Link](https://t.me/Vitaliy_Saburdo)
+- Linkedin - [Link](https://www.linkedin.com/in/vitaliy-saburdo-73363a264/?originalSubdomain=ua)
+- Gmail - [Link](vsaburdo@gmail.com)
