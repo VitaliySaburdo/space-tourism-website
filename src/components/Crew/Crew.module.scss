@@ -22,9 +22,12 @@
 .block {
   display: flex;
   flex-direction: column;
-  width: 539px;
+  width: 100%;
   margin-bottom: 24px;
   padding-top: 40px;
+  @include mq(tab) {
+    width: 539px;
+  }
   @include mq(desk) {
     padding-top: 197px;
   }
@@ -49,28 +52,34 @@
     margin-bottom: 151px;
   }
 }
+
+.number {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  color: rgba($color-white, 0.25);
+  margin-right: 24px;
+  @include mq(tab) {
+    font-size: 20px;
+    margin-right: 24px;
+  }
+  @include mq(desk) {
+    font-size: 28px;
+    letter-spacing: 0.17em;
+  }
+}
 .wrapper {
-  width: 539px;
-  height: auto;
   margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include mq(tab) {
+    width: 539px;
+  }
   @include mq(desk) {
     margin-top: 197px;
     margin-top: 40px;
-  }
-}
-.number {
-  font-family: $font-family;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.15em;
-  color: rgba($color-white, 0.25);
-  margin-right: 24px;
-  @include mq(desk) {
-    font-size: 28px;
-    letter-spacing: 0.17em;
   }
 }
 .shell {
@@ -90,11 +99,15 @@
   text-align: center;
   font-family: $second-family;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 18px;
   text-transform: uppercase;
   color: $color-white;
   opacity: 0.5;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  @include mq(tab) {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
   @include mq(desk) {
     text-align: start;
   }
@@ -103,10 +116,13 @@
   text-align: center;
   font-family: $second-family;
   font-weight: 400;
-  font-size: 56px;
+  font-size: 24px;
   text-transform: uppercase;
   color: $color-white;
   margin-bottom: 24px;
+  @include mq(tab) {
+    font-size: 56px;
+  }
   @include mq(desk) {
     text-align: start;
   }
@@ -116,9 +132,14 @@
   text-align: center;
   font-family: $third-family;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 180%;
   color: $color-blue-300;
+  margin-bottom: 55px;
+  @include mq(tab) {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
   @include mq(desk) {
     text-align: start;
   }
@@ -126,9 +147,12 @@
 .list {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 16px;
   margin-top: auto;
   margin-bottom: 32px;
+  @include mq(tab) {
+    gap: 40px;
+  }
   @include mq(desk) {
     justify-content: start;
     margin-bottom: 40px;
@@ -136,12 +160,16 @@
 }
 
 .btn {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   border: none;
   border-radius: 50%;
   background-color: rgba($color-white, 0.25);
   cursor: pointer;
+  @include mq(tab) {
+    width: 15px;
+    height: 15px;
+  }
   &:hover {
     background-color: rgba(255, 255, 255, 0.5);
   }
@@ -151,11 +179,14 @@
 }
 .box {
   position: relative;
-  width: 539px;
+  width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   overflow: hidden;
+  @include mq(tab) {
+    width: 539px;
+  }
   @include mq(desk) {
     height: 734px;
   }
