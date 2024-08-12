@@ -36,7 +36,9 @@
   font-size: 16px;
   letter-spacing: 0.12em;
   color: $color-white;
+  margin-bottom: 32px;
   @include mq(tab) {
+    margin-bottom: 0;
     padding-top: 38.5px;
     padding-bottom: 38.5px;
   }
@@ -44,13 +46,26 @@
   &::after {
     content: '';
     position: absolute;
-    left: 0;
-    bottom: 0;
+    right: 0;
     opacity: 0;
-    width: 100%;
+    width: auto;
+    height: 100%;
     border-radius: 2px;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    border-right: 3px solid rgba(255, 255, 255, 0.5);
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    @include mq(tab) {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      width: 100%;
+      height: auto;
+      border-radius: 2px;
+      border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+      border-right: none;
+      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
   }
 
   &:hover {
@@ -62,15 +77,21 @@
 
   &.active::after {
     content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    opacity: 1;
-    width: 100%;
     border-radius: 2px;
-    height: 3px;
-    border-bottom: 3px solid $color-white;
+    border-right: 3px solid $color-white;
     transform: scale(1);
+    @include mq(tab) {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 1;
+      width: 100%;
+      border-radius: 2px;
+      height: 3px;
+      border-bottom: 3px solid $color-white;
+      border-right: 0;
+    }
   }
 }
 
