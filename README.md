@@ -50,20 +50,15 @@ Users should be able to:
 - Adaptive CSS (for 3 breakpoints mobile, tablet and desktop devices);
 - Mobile-first workflow
 
-### What I learned
+### What I learned :muscle:
 
-Use this section to recap over some of your major learnings while working through this project.
-Writing these out and providing code samples of areas you want to highlight is a great way to
-reinforce your own knowledge.
+In this project, I learned how to work with Framer and also remembered how to work with background
+images. Worked with Lighthouse website optimization. React(useState, useEffect, useRef,
+useCallback). React-router-home
 
-### Continued development
+### Continued development :rocket:
 
-Use this section to outline areas that you want to continue focusing on in future projects. These
-could be concepts you're still not completely comfortable with or techniques you found useful that
-you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for
-continued development.**
+In the next projects I will improve my JS; I also need to consolidate my knowledge of TypeScript.
 
 ### Useful resources
 
