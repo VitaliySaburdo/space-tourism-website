@@ -1,10 +1,16 @@
 @import '../../styles/index.scss';
 
 .container {
-  padding-top: calc($tab-sec-pt + 40px);
-  padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-top: calc($mob-sec-pt + 24px);
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  @include mq(tab) {
+    padding-top: calc($tab-sec-pt + 40px);
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
   @include mq(desk) {
     padding-top: calc($desk-sec-pt + 46px);
     padding-bottom: 48px;
@@ -12,17 +18,35 @@
     padding-right: 165px;
   }
 }
-.title {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 20px;
-  letter-spacing: 0.15em;
-  color: $color-white;
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 539px;
   margin-bottom: 24px;
+  padding-top: 40px;
+  @include mq(desk) {
+    padding-top: 197px;
+  }
+}
+
+.title {
+  text-align: center;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+  color: $color-white;
+  @include mq(tab) {
+    text-align: start;
+    font-size: 20px;
+    margin-bottom: 66px;
+  }
   @include mq(desk) {
     font-size: 28px;
     letter-spacing: 0.14em;
-    margin-bottom: 24px;
+    margin-bottom: 151px;
   }
 }
 .wrapper {
@@ -62,12 +86,6 @@
   }
 }
 
-.block {
-  display: flex;
-  flex-direction: column;
-  width: 539px;
-  margin-bottom: 24px;
-}
 .role {
   text-align: center;
   font-family: $second-family;
