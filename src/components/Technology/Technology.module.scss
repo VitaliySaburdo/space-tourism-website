@@ -31,7 +31,7 @@
   @include mq(desk) {
     font-size: 28px;
     letter-spacing: 0.14em;
-    margin-bottom: 151px;
+    margin-bottom: 20px;
   }
 }
 
@@ -105,8 +105,7 @@
   color: $color-white;
   cursor: pointer;
   transition: border 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
   @include mq(tab) {
     width: 56px;
