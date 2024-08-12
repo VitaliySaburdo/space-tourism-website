@@ -47,8 +47,8 @@ export const SharedLayout = () => {
           ref={mainRef}
           className={style.main}
           style={{ backgroundImage: backgroundImage }}
-          initial={{ backgroundSize: '100%' }}
-          animate={{ backgroundSize: '103%' }}
+          initial={{ backgroundSize: '120%' }}
+          animate={{ backgroundSize: '125%' }}
           transition={{ duration: 3, ease: [0.25, 0.46, 0.45, 0.94] }}
           key={location.pathname}
         >
