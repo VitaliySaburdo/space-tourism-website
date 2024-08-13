@@ -1,14 +1,27 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { AnimatedText } from '../Animate';
 import style from './Crew.module.scss';
 
 export const Crew = ({ data }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
+  const [intervalId, setIntervalId] = useState(null);
 
-  const HandleOnClick = (idx) => {
+  const HandleOnClick = idx => {
     setCurrentIdx(idx);
+    if (intervalId) {
+      clearInterval(intervalId);
+      setIntervalId(null);
+    }
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIdx(prevIdx => (prevIdx + 1) % data.length);
+    }, 4000);
+    setIntervalId(intervalId);
+    return () => clearInterval(intervalId);
+  }, [data.length]);
 
   return (
     <div className={style.container}>
@@ -36,9 +49,7 @@ export const Crew = ({ data }) => {
               return (
                 <li key={idx}>
                   <button
-                    className={`${style.btn} ${
-                      currentIdx === idx ? style.active : ''
-                    }`}
+                    className={`${style.btn} ${currentIdx === idx ? style.active : ''}`}
                     onClick={() => {
                       HandleOnClick(idx);
                     }}
@@ -56,11 +67,7 @@ export const Crew = ({ data }) => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <img
-                className={style.img}
-                src={data[currentIdx].images.webp}
-                alt={data.name}
-              />
+              <img className={style.img} src={data[currentIdx].images.webp} alt={data.name} />
             </motion.div>
           </div>
         </div>
